@@ -6,9 +6,9 @@ const database = {
       type: "postgres",
       host: "localhost",
       port: 5432,
-      username: "godwinekuma",
-      password: "",
-      database: "invoiceapp",
+      username: process.env.POSTGRES_USER,
+      password: process.env.POSTGRES_PWD,
+      database: process.env.POSTGRES_DB,
       entities: [
         "dist/**/*.model.js"
       ],
@@ -20,7 +20,7 @@ const database = {
       host: "localhost",
       port: 5432,
       username: process.env.POSTGRES_USER,
-      password: "",
+      password: process.env.POSTGRES_PWD,
       database: process.env.POSTGRES_DB,
       entities: [
         "src/**/*.model.ts"
